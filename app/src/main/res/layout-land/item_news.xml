@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/info"
+            android:layout_marginLeft="15dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/avatar"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:layout_marginTop="15dp"
+                tools:srcCompat="@tools:sample/avatars"
+                />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Damir Moldabayev"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/avatar"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvAuthor"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/more"
+                />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="yesterday at 14:00"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/avatar"
+                app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/contentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:text="Asdasdasdasdasdasdasd"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <LinearLayout
+            android:id = "@+id/contentPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/contentText"
+            >
+
+            <ImageView
+                android:id="@+id/contentImg"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/likesComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/contentPic"
+            android:layout_marginTop="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgLike"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/like" />
+            <TextView
+                android:id="@+id/tvLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="315"
+                android:textSize="15sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="5dp"/>
+            <ImageView
+                android:id="@+id/imgComment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/comment"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="30dp"
+                />
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="555"
+                android:textSize="15sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                />
+            <ImageView
+                android:id="@+id/imgRedir"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/redir"
+                android:layout_marginTop="-1dp"
+                android:layout_marginLeft="35dp"
+                />
+            <TextView
+                android:id="@+id/tvRedir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textSize="15sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                />
+            <ImageView
+                android:id="@+id/imgViews"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/views"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="390dp"
+
+                />
+            <TextView
+                android:id="@+id/tvViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.2K"
+                android:textColor="#a3a3a2"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/likesComments"
+            android:layout_marginTop="20dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
